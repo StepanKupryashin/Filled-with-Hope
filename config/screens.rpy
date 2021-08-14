@@ -127,7 +127,7 @@ init:
 
 
         vbox align(0.5, 0.5) spacing 25:
-            textbutton 'Начать' action Start('hope_prologue') at wks_button_hover
+            textbutton 'Начать игру' action Start('hope_prologue') at wks_button_hover
             textbutton 'Дни' action  NullAction() #ShowMenu('hope_prologue') 
             textbutton 'Настройки' action ShowMenu('preferences') at wks_button_hover
             textbutton 'Выход' action ShowMenu('wks_exit') at wks_button_hover

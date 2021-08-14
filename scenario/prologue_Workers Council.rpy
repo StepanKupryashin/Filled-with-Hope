@@ -1,6 +1,6 @@
 
 init:
-    $ mods["hope_prologue"] = u"Восполненный надеждой"
+    $ mods["wks_index"] = u"Восполненный надеждой"
     # ПЕРСОНАЖИ
     $ names["polina"] = u"Полина"
     $ colors["polina"] = {

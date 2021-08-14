@@ -8,6 +8,7 @@ init python:
     wks_sprites_anya   = wks_prefix_sprites + "anya/"
     wks_music = "mods/Workers_Council/music/"
     wks_sprites_polya = wks_prefix_sprites + "polya/"
+    wks_sprites_nikol = wks_prefix_sprites + 'nikol/'
     ## Автоматическое объявление БГ.
 
     def wks_define_images():
@@ -510,3 +511,101 @@ init:
         ),
         True, wks_sprites_polya + "school/close/pol_angryters.png",
     )
+
+    #СПРАЙТЫ НИКОЛАЯ
+    image nikol serius = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "serius.png", 900, 1080) ,
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "serius.png", 900,1080),
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "serius.png", 900, 1080),
+    )
+
+    image nikol serius pioneer = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "serius_pioneer.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "serius_pioneer.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "serius_pioneer.png", 900, 1080),
+    )
+
+    image nikol smile = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "smile.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "smile.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "smile.png", 900, 1080),
+    )
+
+    image nikol smile pioneer = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "smile_pioneer.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "smile_pioneer.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "smile_pioneer.png", 900, 1080),
+    )
+
+    image nikol angry = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "angry.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "angry.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "angry.png", 900, 1080),
+    )
+
+    image nikol angry pioneer = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "angry_pioneer.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "angry_pioneer.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "angry_pioneer.png", 900, 1080),
+    )
+
+    image nikol normal = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "normal.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "normal.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "normal.png", 900, 1080),
+    )
+
+    image nikol normal pioneer = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "normal_pioneer.png", 900, 1080),
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            im.Scale(wks_sprites_nikol + "normal_pioneer.png", 900, 1080) ,
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, im.Scale(wks_sprites_nikol + "normal_pioneer.png", 900, 1080),
+    )
+

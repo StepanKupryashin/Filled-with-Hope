@@ -101,7 +101,7 @@ init:
     style wks_button_text is default:
         color '#004080'
         hover_color '#000080'
-        font 'mods/Workers_Council/fonts/button_text.ttf'
+        font 'mods/Workers_Council/fonts/Bony Regular.ttf'
         size 70
         bold True
         outlines [( 1, '#400080', 1, 1)]

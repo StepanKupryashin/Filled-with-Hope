@@ -70,7 +70,7 @@ init python:
             self.sm = SpriteManager(update=self.update)
 
             self.glows = [ ]
-            self.rd = "mods/Workers_Council/gui/main_menu/lighter.png"
+            self.rd = im.Scale("mods/Workers_Council/gui/main_menu/lighter (2).png", 45, 46)
 
             d = Transform(self.rd, zoom=0.25)
             for i in range(0, 20):
@@ -101,7 +101,7 @@ init:
     style wks_button_text is default:
         color '#004080'
         hover_color '#000080'
-        font 'mods/Workers_Council/fonts/main_menu.ttf'.encode('utf-8')
+        font 'mods/Workers_Council/fonts/button_text.ttf'
         size 70
         bold True
         outlines [( 1, '#400080', 1, 1)]

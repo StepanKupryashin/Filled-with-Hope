@@ -99,8 +99,8 @@ init python:
 init:
     style wks_button is default
     style wks_button_text is default:
-        color '#004080'
-        hover_color '#000080'
+        color '#f4dc26'
+        hover_color '#e9bf32'
         font 'mods/Workers_Council/fonts/Bony Regular.ttf'
         size 70
         bold True

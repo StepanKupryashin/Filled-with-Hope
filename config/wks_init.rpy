@@ -513,99 +513,195 @@ init:
     )
 
     #СПРАЙТЫ НИКОЛАЯ
-    image nikol serius = ConditionSwitch(
+    image nikol serius school far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "serius.png", 900, 1080) ,
+            wks_sprites_nikol + "far/serius.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "serius.png", 900,1080),
+            wks_sprites_nikol + "far/serius.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "serius.png", 900, 1080),
+        True, wks_sprites_nikol + "far/serius.png",
     )
 
-    image nikol serius pioneer = ConditionSwitch(
+    image nikol serius pioneer far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "serius_pioneer.png", 900, 1080),
+            wks_sprites_nikol + "far/serius_pioneer.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "serius_pioneer.png", 900, 1080) ,
+            wks_sprites_nikol + "far/serius_pioneer.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "serius_pioneer.png", 900, 1080),
+        True, wks_sprites_nikol + "far/serius_pioneer.png",
     )
 
-    image nikol smile = ConditionSwitch(
+    image nikol smile school far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "smile.png", 900, 1080),
+            wks_sprites_nikol + "far/smile.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "smile.png", 900, 1080) ,
+            wks_sprites_nikol + "far/smile.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "smile.png", 900, 1080),
+        True, wks_sprites_nikol + "far/smile.png",
     )
 
-    image nikol smile pioneer = ConditionSwitch(
+    image nikol smile pioneer far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "smile_pioneer.png", 900, 1080),
+            wks_sprites_nikol + "far/smile_pioneer.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "smile_pioneer.png", 900, 1080) ,
+            wks_sprites_nikol + "far/smile_pioneer.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "smile_pioneer.png", 900, 1080),
+        True, wks_sprites_nikol + "far/smile_pioneer.png",
     )
 
-    image nikol angry = ConditionSwitch(
+    image nikol angry school far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "angry.png", 900, 1080),
+            wks_sprites_nikol + "far/angry.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "angry.png", 900, 1080) ,
+            wks_sprites_nikol + "far/angry.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "angry.png", 900, 1080),
+        True, wks_sprites_nikol + "far/angry.png",
     )
 
-    image nikol angry pioneer = ConditionSwitch(
+    image nikol angry pioneer far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "angry_pioneer.png", 900, 1080),
+            wks_sprites_nikol + "far/angry_pioneer.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "angry_pioneer.png", 900, 1080) ,
+            wks_sprites_nikol + "far/angry_pioneer.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "angry_pioneer.png", 900, 1080),
+        True, wks_sprites_nikol + "far/angry_pioneer.png",
     )
 
-    image nikol normal = ConditionSwitch(
+    image nikol normal school far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "normal.png", 900, 1080),
+            wks_sprites_nikol + "far/normal.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "normal.png", 900, 1080) ,
+            wks_sprites_nikol + "far/normal.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "normal.png", 900, 1080),
+        True, wks_sprites_nikol + "far/normal.png",
     )
 
-    image nikol normal pioneer = ConditionSwitch(
+    image nikol normal pioneer far = ConditionSwitch(
         "persistent.sprite_time == 'sunset'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "normal_pioneer.png", 900, 1080),
+            wks_sprites_nikol + "far/normal_pioneer.png",
             im.matrix.tint(0.94, 0.82, 1.0)
         ),
         "persistent.sprite_time == 'night'", im.MatrixColor(
-            im.Scale(wks_sprites_nikol + "normal_pioneer.png", 900, 1080) ,
+            wks_sprites_nikol + "far/normal_pioneer.png",
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
-        True, im.Scale(wks_sprites_nikol + "normal_pioneer.png", 900, 1080),
+        True, wks_sprites_nikol + "far/normal_pioneer.png",
     )
 
+    image nikol normal school close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/normal.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/normal.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/normal.png",
+    )
+    
+    image nikol normal pioneer close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/normal_pioneer.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/normal_pioneer.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/normal_pioneer.png",
+    )
+
+    image nikol angry pioneer close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/angry_pioneer.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/angry_pioneer.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/angry_pioneer.png",
+    )
+
+    image nikol angry school close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/angry.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/angry.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/angry.png",
+    )
+
+
+    image nikol serius pioneer close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/serius_pioneer.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/serius_pioneer.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/serius_pioneer.png",
+    )
+
+    image nikol serius school close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/serius.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/serius.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/serius.png",
+    )
+
+    image nikol smile pioneer close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/smile_pioneer.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/smile_pioneer.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/smile_pioneer.png",
+    )
+
+    image nikol smile school close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_nikol + "close/smile.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_nikol + "close/smile.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_nikol + "close/smile.png",
+    )

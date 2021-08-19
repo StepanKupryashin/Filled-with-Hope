@@ -9,6 +9,7 @@ init python:
     wks_music = "mods/Workers_Council/music/"
     wks_sprites_polya = wks_prefix_sprites + "polya/"
     wks_sprites_nikol = wks_prefix_sprites + 'nikol/'
+    wks_sprites_ser = wks_prefix_sprites + "ser/"
     ## Автоматическое объявление БГ.
 
     def wks_define_images():
@@ -704,4 +705,76 @@ init:
             im.matrix.tint(0.63, 0.78, 0.82)
         ),
         True, wks_sprites_nikol + "close/smile.png",
+    )
+
+    image ser normal far = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_ser + "far/ser_normal.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_ser + "far/ser_normal.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_ser + "far/ser_normal.png",
+    )
+
+    image ser normal close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_ser + "close/ser_normal.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_ser + "close/ser_normal.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_ser + "close/ser_normal.png",
+    )
+
+    image ser smile far = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_ser + "far/ser_smile.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_ser + "far/ser_smile.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_ser + "far/ser_smile.png",
+    )
+
+    image ser smile close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_ser + "close/ser_smile.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_ser + "close/ser_smile.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_ser + "close/ser_smile.png",
+    )
+
+    image ser serious far = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_ser + "far/ser_serious.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_ser + "far/ser_serious.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_ser + "far/ser_serious.png",
+    )
+
+    image ser serious close = ConditionSwitch(
+        "persistent.sprite_time == 'sunset'", im.MatrixColor(
+            wks_sprites_ser + "close/ser_serious.png",
+            im.matrix.tint(0.94, 0.82, 1.0)
+        ),
+        "persistent.sprite_time == 'night'", im.MatrixColor(
+            wks_sprites_ser + "close/ser_serious.png",
+            im.matrix.tint(0.63, 0.78, 0.82)
+        ),
+        True, wks_sprites_ser + "close/ser_serious.png",
     )

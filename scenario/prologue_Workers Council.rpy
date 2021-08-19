@@ -378,7 +378,7 @@ label hope_prologue:
     show anya surprise school close with dspr
     anya "Не деритесь мальчики, чего вы?"
     "Вовремя подошедшая пассия этого осла смогла успешно разрешить конфликт. Коля сразу же утихомирился, стал вести себя более сдержанно."
-    show nikol serious school close at right with dspr
+    show nikol serius school close at right with dspr
     "Коля сразу же утихомирился, стал вести себя более сдержанно."
     ilya "Ничего. Мы, пожалуй, пойдём."
     "Я улыбнулся, стрельнув колким взглядом в глаза Ани."

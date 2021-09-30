@@ -23,6 +23,10 @@ init python:
 init:
     image cat_hands = "mods/Workers_Council/images/sprites/cat.png"
     image red_corn = "mods/Workers_Council/images/ef/red.png"
+    $ Reflection = wks_music + "Reflections.mp3"
+    $ your_Bright = wks_music + "your-Bright.mp3"
+    $ SkaR_PeacefulForest = wks_music + "SkaR-PeacefulForest.mp3"
+    $ pathhh = wks_music + "path.mp3"
 
     transform polya_sit:
         parallel:

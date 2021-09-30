@@ -2,10 +2,42 @@ init:
 
     $ mods["VN_prolog"]=u"modTest"
     $ voj = Character(u'Вожатая',color="#32CD32")
+    # ПЕРСОНАЖИ
+    $ names["polina"] = u"Полина"
+    $ colors["polina"] = {
+        "day": (30, 144, 255, 255),
+        "sunset": (30, 144, 255, 255),
+        "night": (30, 144, 255, 255),
+        "prolog": (30, 144, 255, 255) }
+    $ store.names_list.append("polina")
+
+    $ names["anya"] = u"Аня"
+    $ colors["anya"] = {
+        "day": (255, 0, 0, 255),
+        "sunset": (255, 0, 0, 255),
+        "night": (255, 0, 0, 255),
+        "prolog": (255, 0, 0, 255) }
+    $ store.names_list.append("anya")
+
+    $ names["nik"] = u"Николай"
+    $ colors["nik"] = {
+        "day": (240, 230, 140, 255),
+        "sunset": (240, 230, 140, 255),
+        "night": (240, 230, 140, 255),
+        "prolog": (240, 230, 140, 255) }
+    $ store.names_list.append("nik")
+
+    $ names["ilya"] = u"Илья"
+    $ colors["ilya"] = {
+        "day": (245, 245, 245, 255),
+        "sunset": (245, 245, 245, 255),
+        "night": (245, 245, 245, 255),
+        "prolog": (245, 245, 245, 255) }
+    $ store.names_list.append("ilya")
 label VN_prolog:
-    play music Down with fadein2
+    $ persistent.sprite_time = "day"
+    $ day_time()
     play sound sfx_bus_idle
-    play ambience_medium_crowd_indoors_1
 #шум мотора автобуса и голоса как пионеры пиздят fadein 2# 
     scene bg int_bus_people_day
     "Здравствуй жаркий июль." 
@@ -32,19 +64,17 @@ label VN_prolog:
     th "Надеюсь меня не забудут разбудить..." 
     "Я прикрыл глаза и растворился в солнечном свете."
 #(SkaR - Down by the Riverside)(stop)#
-    stop music with fadeout 2
-    stop ambience with fadeout 2
-#stop ambience fadeout 2#
+    stop ambience fadeout 2
     show blink
     "..."
     scene bg int_bus_people_day
     show unblink
     $renpy.pause(3)
 #тут небольшая пауза типа спит#
-    play music Reflections    
+    play music Reflection  
 #(Денис Баклин) - (Reflections(play)#
 #просто шум детей#
-    stop sfx
+    stop sound
     "Удивительно, но я проснулся сам." 
     "Наушники выпали из ушей и шумные переговоры людей разбудили меня." 
     "Немногочисленные мальчики помогали девочкам достать чемоданы, а значит мы на месте." 
@@ -72,9 +102,9 @@ label VN_prolog:
     hide mt with dissolve
     "Я послушно пошел за вожатой и оказался рядом с небольшой группой людей."
     scene ext_camp_entrance_day with dissolve2
-    show polya neitrall pioneer close at left with dspr
-    show anya smile pioneer close at center with dspr
-    show sl smile pioneer close at right with dspr
+    show polya neitrall school close at left with dspr
+    show anya smeh school close at center with dspr
+    show sl smile sport close at right with dspr
 #спрайты полины ани лены слави с дефолт еблами#    
     "Мельком оглядев своих будущих товарищей, отметил, что в отряде преимущественно девочки."
     hide polya with dspr
@@ -118,7 +148,7 @@ label VN_prolog:
 #    (Sergey Eybog - Reflection On Water)(stop)# 
     "..." 
 #    (Sergey Eybog - Your Bright Side)(play)#
-    play music your-Bright
+    play music your_Bright
     scene bg ext_dining_hall_away_day with dissolve2
     "По пути к столовой, в толпе я приметил знакомое лицо."
     show anya smeh school  far with dspr
@@ -130,7 +160,7 @@ label VN_prolog:
     scene bg ext_dining_hall_near_day with dissolve2
     "У столовой была большая очередь.{w} Самыми первыми стояли младшие отряды.{w} Мы же, как самые старшие, заняли место в конце." 
     "Шум пионеров мне уже порядком надоел, так что я размотал запутавшиеся наушники и включил случайную песню из списка, но спокойно витать в облаках мне не дали."
-    show sl normal pioneer with dissolve
+    show sl normal sport close with dissolve
     sl "Привет!" 
     "Я вытащил один наушник." 
     me "Чего?{w} Не услышал." 
@@ -140,27 +170,27 @@ label VN_prolog:
     me "Э...{w} Семен." 
     "Мой голос слегка дрогнул.{w} Кто же знал, что со мной попытается познакомиться девушка.{w} К слову, очень даже симпатичная." 
     th "Мда, мне бы писать мануалы о том, как создать ужасное первое впечатление."
-    show sl smile pioneer
+    show sl smile sport close with dspr
     sl "Приятно познакомится.{w} А меня Славяна зовут, но это слишком официально, так что называй меня просто Славей, хорошо?" 
     "Девочка слегка смутилась и поправила непослушную прядку волос." 
     "Я же загляделся на нее.{w} Золотистые волосы, аккуратно собранные в две длинные косички, слегка красноватый румянец на щеках и очень красивые голубые глаза, которые будто затягивали в глубину вод, где потонет даже самое крепкое судно." 
     me "Хорошо, договорились." 
     "Славя улыбнулась еще шире, а я насторожился." 
     "Казалось бы, девочка просто хотела познакомится, но моя вечная паранойя воссоздает в мыслях кучу ситуаций, где меня обманут, предадут и убьют еще до кучи." 
-    show sl serious pioneer
+    show sl serious sport close with dspr
     sl "Все хорошо?{w} Ты какой-то напряженный..." 
     "Славя действительно выглядела обеспокоенной.{w} Может все же остались в мире небезразличные люди?" 
     me "А...да...{w} Устал просто, не волнуйся."
-    show sl sad pioneer   
+    show sl sad sport close with dspr  
     sl "Точно?{w} А то тут медпункт недалеко." 
     me "Откуда ты это знаешь?" 
     "На лицо девочки вернулась улыбка."
-    show sl smile pioneer  
+    show sl smile sport close with dspr
     sl "Не первый раз тут.{w} Каждое лето приезжаю и все никак не надоест.{w} В этом лагере я будто дома." 
     "Меня настораживала такая открытость синеглазки.{w} Обычно люди держатся закрыто, не пускают в свой внутренний мир кого попало." 
     "И я прекрастно их понимаю!" 
     "Пускаешь в святая святых, а они заходят в грязной обуви, оставляя свои следы, которые так просто не отмоешь."
-    show sl sad pioneer   
+    show sl sad sport close with dspr
     sl "Ты опять замолчал...{w} Уверен, что не нужно к врачу?" 
     "Что же, видимо, Славя разительно отличается от всех, кого я знал раньше." 
     me "Да успокойся, я в порядке." 
@@ -229,7 +259,7 @@ label VN_prolog:
     "Вожатая сказала осматривать окрестности, так что я пошел куда глаза глядят." 
     "..." 
 
-    play music SkaR-Peaceful Forest
+    play music SkaR_PeacefulForest
 #(SkaR - Peaceful Forest)(play)
 #снова через затемнение    
     scene bg ext_boathouse_sunset 
@@ -275,7 +305,7 @@ label VN_prolog:
     "Аня" "Бывает же такое. Кого угодно ожидала лагере встретить, но только не тебя. Какими ветрами занесло?" 
     "Я удивлением услышал свой голос."
     me "Сам не знаю...{w}Так вышло.{w} А ты с какой цель приехала?"
-    showq anya smile school close with dspr
+    show anya smeh school close with dspr
 #Аня улыбка    
     "Девочка улыбнулась своей фирменной натянутой улыбкой, которая могла означать что угодно, только не дружелюбие."  
     "Аня" "Отдыхать конечно! Зачем еще в летние лагеря ездят?"
@@ -309,7 +339,7 @@ label VN_prolog:
     me "И поэтому ты решила, что лучший выход - это сделать себя идеальной в их глазах?" 
     "Аня" "Да." 
     me "Что же, тебя можно понять. Хотя я бы так не смог." 
-    show anya smile school close with dspr
+    show anya smeh school close with dspr
 #Аня улыбка     
     "Аня" "А ты и не должен. У каждого свои принципы и методы." 
     "…"
@@ -328,7 +358,7 @@ label VN_prolog:
 #тож через затемнение    
     scene bg ext_square_night with dissolve
 #(pathways_7dl [Micheal Ortega - Night of rain])(play)
-    play music path
+    play music pathhh
     "Мы молча двинулись в сторону площади."
     "Каждый молчал о чем-то своем.{w} Слова казались излишними.{w} Уже достаточно сказано." 
     "Так же беззвучно разошлись в разные стороны, и только сейчас я задумался."
@@ -369,9 +399,9 @@ label VN_prolog:
     "Ну а чего я ожидал со своей то удачей."
     menu:
         "Ладно":
-            jump label od_rut
+            jump  od_rut
         "Может поищем еще?":
-            jump label polya_rut_1day
+            jump  polya_rut_1day
 #ВЫБОР: Ладно/Может поищем еще?
 
 #Ладно(рут ОД):
@@ -381,6 +411,7 @@ label od_rut_1day:
     mt "Скоро уже отбой, так что пойдем покажу тебе где домик."
     "Я послушно поплелся за вожатой."
     hide mt
+    scene bg night_houses with dissolve
 #    scene bg ночная улица с домиками, проебал фон
     "По пути разглядывал других ребят, которые разбились по парам и отпирали двери своих берлог."
     "Видно, я один такой удачливый."
@@ -434,6 +465,7 @@ label polya_rut_1day:
     me "Спасибо большое, Ольга Дмитриевна."
     "Улыбнувшись мне, она направилась по своим делам.{w} А я же в свою очередь пошёл заселяться."
     hide mt
+    scene bg gg_house with dissolve
 #//домик гг// хз пока какой домик на фон, Юрий, решай
     "Повозившись с замком, я вошёл в свое жилище."
     me "Не так плачевно, как я думал."

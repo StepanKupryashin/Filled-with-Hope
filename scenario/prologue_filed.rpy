@@ -349,7 +349,7 @@ label VN_prolog:
 #тут затемнение
     $ renpy.pause(2.0)
     $ persistent.sprite_time = "night"
-    $ day_time("night")
+    $ night_time()
     "Мы так заболтались, что не заметили как стемнело." 
     "Аня" "Ладно, пора с жильем определится." 
     me "А, точно. Я уже и забыл."

@@ -1,6 +1,6 @@
 init:
 
-    $ mods["VN_prolog"]=u"modTest"
+    $ mods["wks_index"]=u"modTest"
     $ voj = Character(u'Вожатая',color="#32CD32")
     # ПЕРСОНАЖИ
     $ names["polina"] = u"Полина"
